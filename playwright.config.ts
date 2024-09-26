@@ -55,7 +55,7 @@ export default defineConfig({
 		// viewport: { width: 1280, height: 720 },
 		// video: 'on-first-retry',
 	},
-	// timeout: 30000, //https://playwright.dev/docs/test-timeouts
+	timeout: 30000, //https://playwright.dev/docs/test-timeouts
 	// expect: {
 	/**
 	 * Maximum time expect() should wait for the condition to be met.
