@@ -79,6 +79,11 @@ export default defineConfig({
 		},
 
 		{
+			name: 'Mobile-Chrome',
+			use: { ...devices['Pixel 5'] },
+		},
+
+		{
 			name: 'firefox',
 			use: {
 				baseURL: 'https://playwright.dev/',
