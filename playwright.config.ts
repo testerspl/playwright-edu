@@ -50,6 +50,8 @@ export default defineConfig({
 		/* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
 		trace: 'on',
 		screenshot: 'only-on-failure',
+
+		testIdAttribute: 'data-test',
 		// headless: false,
 		// ignoreHTTPSErrors: true,
 		// viewport: { width: 1280, height: 720 },
@@ -72,7 +74,7 @@ export default defineConfig({
 		{
 			name: 'chromium',
 			use: {
-				baseURL: 'https://playwright.dev/',
+				baseURL: 'https://testerzy.pl/',
 				...devices['Desktop Chrome'],
 				// viewport: { width: 1280, height: 720 },
 			},

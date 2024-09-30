@@ -1,18 +1,18 @@
 import { expect, test } from '@playwright/test';
 
 test('has title', async ({ page }) => {
-	await page.goto('https://playwright.dev/');
+	await page.goto('/');
 	await expect(page).toHaveTitle(/Playwright/);
 });
 
 test('get started link', async ({ page }) => {
-	await page.goto('https://playwright.dev/');
+	await page.goto('/');
 	await page.getByRole('link', { name: 'Get started' }).click();
 	await expect(page).toHaveURL(/.*intro/);
 });
 
 test('check Java page', async ({ page }) => {
-	await page.goto('https://playwright.dev/');
+	await page.goto('/');
 	await page.getByRole('link', { name: 'Get started' }).click();
 	await page.getByRole('button', { name: 'Node.js' }).hover();
 	await page.getByText('Java', { exact: true }).click();
