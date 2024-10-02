@@ -4,9 +4,9 @@
   "description": "Basic project, prepared for the training of an automation in playwright.",
   "main": "index.js",
   "scripts": {
-    "test-e2e-example": "npx playwright test tests-examples/example.spec.ts --project=chromium",
+    "test-e2e-example": "npx playwright test tests-examples/example.spec.ts --project=chromium --ui",
     "test-e2e-example-api": "npx playwright test tests-examples/exampleApi.spec.ts --project=chromium",
-    "test-e2e": "npx playwright test tests/ --project=chromium",
+    "test-e2e": "npx playwright test tests/ --project=chromium --ui",
     "test-e2e-mobile": "npx playwright test tests-examples/example.spec.ts --project=Mobile-Chrome",
     "test-e2e-all": "npx playwright test tests --project=all-browsers-and-tests",
     "test-e2e-ci": "CI=1 npx playwright test --project=ci --shard=$CI_NODE_INDEX/$CI_NODE_TOTAL",

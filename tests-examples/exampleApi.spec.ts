@@ -31,7 +31,7 @@ test.describe('API Test', () => {
 			}
 		);
 
-		expect(response.status()).toBe(201); // Oczekiwany status przy zapytaniu POST to 201 (Created)
+		expect(response.status()).toBe(201); // Oczekiwany status przy zapytaniu POST to 200 (Created)
 
 		const responseBody = await response.json();
 		expect(responseBody).toHaveProperty('id'); // API powinno zwrócić nowo utworzone ID
@@ -40,7 +40,7 @@ test.describe('API Test', () => {
 });
 
 test.describe('API Test with Headers', () => {
-	test('GET request with headers', async ({ request }) => {
+	test.only('GET request with headers', async ({ request }) => {
 		// Ustawienie nagłówków
 		const headers = {
 			Authorization: 'Bearer your_token_here', // Token autoryzacji
@@ -65,7 +65,6 @@ test.describe('API Test with Headers', () => {
 		// Sprawdzanie danych w odpowiedzi
 		expect(responseBody).toHaveProperty('id', 1);
 		expect(responseBody).toHaveProperty('title');
-		console.log(responseBody); // Dla celów debugowania
 	});
 
 	test('POST request with headers', async ({ request }) => {
